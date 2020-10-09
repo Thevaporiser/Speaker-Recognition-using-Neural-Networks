@@ -1,5 +1,6 @@
 import os
 import matplotlib.pyplot as plt
+import gc
 
 #for loading and visualizing audio files
 import librosa
@@ -37,7 +38,9 @@ class wave2Spec:
         plt.colorbar()
         
         plt.savefig(save_image)
-    
+        plt.clf()
+        plt.close("all")
+        gc.collect()
    
         
     
