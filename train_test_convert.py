@@ -7,10 +7,10 @@ import numpy as np
 import pandas as pd
 from wavToSpectrogram_2 import wave2Spec as w2s
 
-path = 'Path/to/folder/data/'
-saveImg = '/Path/to/folder/data/TEST' #change TRAIN to TEST
+path = 'Path/to/folder/--/data/'
+saveImg = '/Path/to/folder/--/data/TEST' #change TRAIN to TEST
 #in below line, change train_data to test_data and select the path column name for windows and change nrows value ( for TRAIN = 23100, for TEST = 8400)
-Data = pd.read_csv("/Path/to/csv/file/test_data.csv", dtype = {"dialect_region": str, "speaker_id": str, "path_from_data_dir": str,"filename": str, "is_audio": bool}, nrows=8400, usecols =['dialect_region','speaker_id','filename','path_from_data_dir','is_audio'])
+Data = pd.read_csv("/Path/to/csv/file/--/test_data.csv", dtype = {"dialect_region": str, "speaker_id": str, "path_from_data_dir": str,"filename": str, "is_audio": bool}, nrows=8400, usecols =['dialect_region','speaker_id','filename','path_from_data_dir','is_audio'])
 audioBool = np.array(Data["is_audio"])
 #change to windows file path column as stated in the csv file in the below line 
 audio_path = np.array(Data["path_from_data_dir"])
