@@ -37,7 +37,7 @@ appPath = np.array(appPath)
 imgfileArray = np.array(imgFile)
 
 for i in range(len(imgfileArray)):
-    im.append(audio_path[i][6:-4] + '.png')
+    im.append(audio_path[i][6:-4] + '.png') #change to [5:-4] for TEST and [6:-4] for TRAIN 
 
 imArray = np.array(im)
 
